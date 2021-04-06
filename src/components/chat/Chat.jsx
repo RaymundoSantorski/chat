@@ -49,7 +49,7 @@ export const Chat = ({setTo, to, messages = [], socket, setMessages, last, users
     useEffect(() => {
         const aux = messages;
         const lastMessage = aux.slice().pop();
-        if(!lastMessage.read){
+        if(lastMessage && !lastMessage.read){
             lastMessage.read = true;
             setMessages((mess) => {
                 console.log(lastMessage);
