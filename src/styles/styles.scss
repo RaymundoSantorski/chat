@@ -1,0 +1,19 @@
+$danger: #f10c32;
+$succeed: #2ad813fa;
+$secondary: #e7ecebfa;
+$shadow: #4a504a;
+$primary: #eee5c7;
+
+$softGrey: #949794;
+$grey: #606360;
+$darkGrey: #444643;
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: $primary;
+}
+
+@import './components/navbar/XS';
+
+@import './components/chat/XS';

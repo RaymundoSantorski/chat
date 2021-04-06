@@ -1,0 +1,83 @@
+@media (max-width: 575px){
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 4px solid $danger;
+        width: calc(100% - 40px);
+        position: fixed;
+        height: 40px;
+        padding: 0 20px;
+        background-color: $secondary;
+        box-shadow: 1px 1px 2px $shadow;
+        &.online{
+            border-bottom: 4px solid $succeed;
+        }
+    }
+    .burger{
+        z-index: 2;
+        .burgerTop, .burgerMiddle, .burgerBottom{
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            margin-top: 5px;
+        }
+        &.active{
+            .burgerTop{
+                transform: rotate(45deg);
+                margin-bottom: -35%;
+            }
+            .burgerMiddle{
+                display: none;
+            }
+            .burgerBottom{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .modal{
+        display: none;
+        &.show{
+            display: block;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+    .modalOffset{
+        background-color: rgba($color: #000, $alpha: 0.1);
+        left: 0;
+        top: 0;
+        width: 30%;
+        height: 100%;
+    }
+    .modalContent{
+        background-color: white;
+        position: fixed;
+        right: 0;
+        top: 0;
+        padding-top: 40px;
+        width: 70%;
+        height: 100%;
+    }
+    .modalUser{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 10px;
+        height: 40px;
+        border-bottom: 1px solid $shadow;
+        .modalUserImg{
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: grey;
+        }
+    }
+}
